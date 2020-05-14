@@ -1,33 +1,97 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-   font-size: 10px;
-   font-family: 'Roboto', sans-serif;
+html {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
 }
 
-header{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-.main-nav{
-    width: 100%;
-    height: 10rem;
-    padding: 0 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.main-nav {
+  width: 100%;
+  height: 10rem;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo a{
-    font-family: 'Lato', sans-serif;
-    font-size: 1.6rem;
-    /*color: #ffffff;*/
+.logo a {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  /*color: #ffffff;*/
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: 2px solid #eee;
+  padding: 1rem 2rem;
 }
+
+.hamburger-menu {
+  height: 5rem;
+  width: 5rem;
+  background-color: #eee;
+  border-radius: 0.4rem;
+  box-shadow: 0.5rem 0.5rem 1rem #cacaca, -0.5rem -0.5rem 1rem #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-menu:hover {
+  box-shadow: inset 0.5rem 0.5rem 1rem #cacaca, inset -0.5rem -0.5rem 1rem #fff;
+}
+
+.bar {
+  width: 3rem;
+  height: 2px;
+  background-color: #333333;
+  display: inline-block;
+  position: relative;
+  transition: background-color 0.5s;
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: #333333;
+  transition: all 0.5s;
+}
+
+.bar::before {
+  top: -0.8rem;
+}
+
+.bar::after {
+  top: 0.8rem;
+}
+
+.open .bar {
+  background-color: transparent;
+}
+
+.open .bar::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.open .bar::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+/*Stopped at 20:49*/
