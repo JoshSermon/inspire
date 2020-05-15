@@ -9,6 +9,10 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   width: 100%;
   position: absolute;
@@ -47,6 +51,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2000;
 }
 
 .hamburger-menu:hover {
@@ -94,4 +99,51 @@ header {
   transform: rotate(-135deg);
 }
 
-/*Stopped at 20:49*/
+.nav-list {
+  width: 50rem;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #eee;
+  transform: translateX(55rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.1);
+  z-index: 1500;
+  transition: transform 0.7s;
+}
+
+.open .nav-list {
+  transform: translateX(0);
+}
+
+.nav-item {
+  list-style: none;
+  border-bottom: 2px solid crimson;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  color: #333333;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  transition: color 0.5s;
+}
+
+.nav-link:hover {
+  color: crimson;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("images/chile.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+}
