@@ -14,7 +14,7 @@
     <header>
       <nav class="main-nav">
         <div class="logo">
-          <a href="index.html">Santiago</a>
+          <a href="index.html">Mexico City</a>
         </div>
         <div class="hamburger-menu">
           <span class="bar"></span>
@@ -42,14 +42,16 @@
     <section class="hero">
       <div class="hero-clipped">
         <div class="hero-textbox">
-          <h1 class="main-heading">Santiago</h1>
+          <h1 class="main-heading">Mexico City</h1>
           <h2 class="sub-heading">
-            Learn about our awesome tourist attractions
+            Explore our awesome tourist attractions
           </h2>
           <a href="#" class="cta-btn">Learn more</a>
         </div>
       </div>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 
     <script>
       const mainNav = document.querySelector(".main-nav");
@@ -58,6 +60,9 @@
       hamburgerMenu.addEventListener("click", function () {
         mainNav.classList.toggle("open");
       });
+
+      gsap.fromTo(".hero-clipped", { scaleX: 0 }, { duration: 1, scaleX: 1 });
+      gsap.fromTo(".logo", { x: 200, opacity: 0 }, { duration: 1, scaleX: 1 });
     </script>
   </body>
 </html>
