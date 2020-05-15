@@ -243,7 +243,7 @@ header {
     outline-color: #333333;
   }
 }
-*/ @media screen and (max-width: 760px) {
+@media screen and (max-width: 760px) {
   .nav-list {
     width: 30rem;
   }
